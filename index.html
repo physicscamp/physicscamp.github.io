@@ -9,8 +9,9 @@
                 n = document.getElementById("n").value;
                 r = document.getElementById("r").value;
                 result = document.getElementById("result");
-                
+                total = document.getElemntById("total")
                 result.innerHTML = "The interest is " + (p*n*r/100);
+		total.innerHTML = "The total amount you will get: " + (p + (p*n*r/100));
             }
         </script>
     </head>
@@ -18,12 +19,13 @@
     <body>
         <h1>Simple Interest Calculation</h1>
 
-        Amount: <input id="p"><br/>
-        Rate: <input id="r"><br/>
-        No. of Years: <input id="n"><br/>
+	    Amount: <input id="p"><br/></br>
+        Rate: <input id="r"><br/><br/>
+        No. of Years: <input id="n"><br/><br/>
 
         <button onclick="calculate()">Calculate</button>
 
         <p id="result"></p>
+	<p id="total"></p>
     </body>
 </html>
